@@ -1,9 +1,14 @@
+# umbrellapp
+## A weather forecast app
+
 ## Clone and Run
 You have to run an HTTP server (apache, node, etc). 
 Then clone the repo in your folder
 ```sh
 git clone https://github.com/antonisgly/umbrellapp.git
 ```
+## OpenWeatherMap API
+[16 day / daily forecast](https://openweathermap.org/forecast16)
 
 ## Frameworks and Libraries 
 * Angular JS
