@@ -1,5 +1,5 @@
 # umbrellapp
-## A weather forecast app
+#### A weather forecast app
 
 ## Clone and Run
 You have to run an HTTP server (apache, node, etc). 
