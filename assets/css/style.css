@@ -218,6 +218,7 @@ button#getCoords {
     top: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
+    width: 100%;
     font-family: Biko_Regular;
     color: #ffffff;
     text-align: center;
