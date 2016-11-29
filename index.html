@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="umbrellapp">
+    <meta name="author" content="Antonis Gly">
+    <link rel="icon" type="image/png" href="assets/icons/umbrella.png">
+    <!--- STYLES --->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/components-font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/meteocons/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-google-places-autocomplete/src/autocomplete.css">
+    <!--- END OF STYLES --->
+    <title>umbrellapp</title>
+</head>
+<body class="{{bgColor}}" ng-controller="mainCtrl">
+<!--- SIDEBAR --->
+<div id="sidebar" class="col-xs-12 col-sm-3">
+    <a ng-click="closeSidebar()">
+        <img src="assets/icons/close.png">
+    </a>
+    <div class="sidebarWrapper">
+        <section class="textWhite firstSection">
+            <p>Your</p>
+            <p>best</p>
+            <p>weather</p>
+            <p>app</p>
+        </section>
+        <section class="textPurple secondSection">
+            <img src="assets/icons/line.png">
+            <p>team</p>
+            <p>history</p>
+            <p>contact</p>
+         </section>
+    </div>
+    <section class="textPurple socialSection">
+        <p>suggest to a friend</p>
+        <a href="https://www.facebook.com/dialog/feed?app_id=184683071273&link=http%3A%2F%2Fwww.holy.gd%2F&picture=http%3A%2F%2Fwww.insert-image-share-url-here.jpg&name=umbrellapp%20%40holy%20by%20Antonis%20Gly&caption=%20&description=umbrellapp%20%40holy%20by%20Antonis%20Gly&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F" target="_blank">
+            <img src="assets/icons/fb.png">
+        </a>
+        <a href="http://twitter.com/intent/tweet?text=umbrellapp%20%40holy%20by%20%23AntonisGly%20http%3A%2F%2Fwww.holy.gd%2F" target="_blank">
+            <img src="assets/icons/twitter.png">
+        </a>
+        <a href="https://plus.google.com/share?url=holy.gd%20umbrellapp%20by%20Antonis%20Gly" target="_blank">
+          <img src="assets/icons/google.png">
+        </a>
+    </section>
+</div>
+<!--- END OF SIDEBAR --->
+
+<!--- LOADING LAYER --->
+<div id="loadingLayer">
+    <div id="umbrella" class="textWhite">
+        <img  src="assets/icons/umbrellaBig.png" class="animated infinite flash">
+        <p class="animated infinite tada">umbrellapp</p>
+    </div>
+    <img id ="logo" src="assets/icons/empty.png">
+</div>
+<!--- END OF LOADING LAYER --->
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a ng-click="openSidebar()"><img class="navIcon"  src="assets/icons/menu.png" class="animated shake"></a>
+    <img ng-src="assets/icons/{{umbrella}}.png" class="centerPosUmbrella">
+</nav>
+<!-- END OF NAVBAR -->
+
+<!-- MAIN WRAPPER - CONTENT -->
+<div>
+    <div class="row" ui-view>
+        <div class="mainBlock">
+            <p class="text-center textWhite">type a location:</p>
+            <div class="inner-addon right-addon">
+                <a ng-click="searchByPlace()"><i class="glyphicon glyphicon-search"></i></a>
+                <input id="locationInput" type="text" g-places-autocomplete ng-model="place" class="form-control radiusZero" placeholder="type here.." />
+            </div>
+            <p class="text-center textWhite">or give us your location</p>
+            <button id="getCoords" class="btn radiusZero" ng-click="searchByCoords()"><i class="fa fa-location-arrow" aria-hidden="true"></i>  access location</button>
+        </div>
+    </div>
+</div>
+<!-- END OF MAIN WRAPPER - CONTENT -->
+
+<!--- JS FILES --->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/ngGeolocation/ngGeolocation.js"></script>
+<script src="assets/js/xml2json.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSrxi48nei5SYTWSjmIVizLpLrxlOJIQU&libraries=places"></script>
+<script src="bower_components/angular-google-places-autocomplete/dist/autocomplete.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

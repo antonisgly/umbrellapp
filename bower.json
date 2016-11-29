@@ -1,0 +1,29 @@
+{
+  "name": "umbrellapp",
+  "authors": [
+    "Antonis Gly <antonisgly@gmail.com>"
+  ],
+  "description": "A Web App for weather forecast",
+  "main": "",
+  "keywords": [
+    "openweathermap",
+    "angularjs",
+    "openweathermap",
+    "weather",
+    "webapp",
+    "weather",
+    "weather",
+    "forecasts"
+  ],
+  "license": "MIT",
+  "homepage": "https://gr.linkedin.com/in/antonis-glykofridis-4479b298",
+  "dependencies": {
+    "angular-google-places-autocomplete": "^0.2.7",
+    "animate.css": "^3.5.2",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "3.3.6",
+    "components-font-awesome": "^4.7.0",
+    "angular": "^1.5.9",
+    "ngGeolocation": "^0.0.8"
+  }
+}

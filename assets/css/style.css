@@ -1,0 +1,263 @@
+/*** FONTS ***/
+@font-face {
+    font-family: Biko_Black;
+    src: url(../fonts/Biko_Black.otf);
+}
+@font-face {
+    font-family: Biko_Bold;
+    src: url(../fonts/Biko_Bold.otf);
+}
+@font-face {
+    font-family: Biko_Light;
+    src: url(../fonts/Biko_Light-Restricted.otf);
+}
+@font-face {
+    font-family: Biko_Regular;
+    src: url(../fonts/Biko_Regular.otf);
+}
+
+/*** METEOCONS FONT ***/
+.icon:before {
+    font-family: 'MeteoconsRegular';
+    content: attr(data-icon);
+}
+.icon {
+    font-size: 8em;
+    text-decoration: none;
+    color: #ffffff;
+}
+/*** END OF METEOCONS FONT ***/
+
+/*** END OF FONTS ***/
+
+/*** BODY ***/
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+/*** END OF BODY ***/
+
+/*** SIDEBAR MENU***/
+#sidebar {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: #6ffe90;
+    z-index: 1000;
+    padding: 40px 20px;
+}
+.sidebarWrapper {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0,-50%);
+}
+.firstSection, .secondSection {
+    font-family: Biko_Regular;
+    font-size: 1.6em;
+}
+.socialSection {
+    font-family: Biko_Regular;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+.socialSection img {
+    margin-right: 5px;
+}
+/*** END OF SIDEBAR MENU***/
+
+/*** LOADING LAYER ***/
+#loadingLayer {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left:  0px;
+    width: 0%;
+    height:0%;
+    z-index: 1000;
+    background-color: #ff7070;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -ms-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;
+}
+#umbrella {
+   display: none;
+   position: absolute;
+   top: 50%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+    font-family: Biko_Regular;
+    font-size: 1.5em;
+    text-align: center;
+}
+#umbrella p {
+    margin-top: 25px;
+}
+#loadingLayer img#logo {
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    /*** END OF LOADING LAYER ***/
+
+/*** NAVBAR ***/
+nav.navbar {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0px 20px;
+}
+.navIcon {
+    float: left;
+}
+.centerPosUmbrella{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+/*** END OF NAVBAR ***/
+
+/*** WRAPPER - SEARCH PAGE***/
+.mainBlock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Biko_Regular;
+}
+.mainBlock p {
+     font-size: 1.3em;
+ }
+div.mainBlock p:nth-of-type(2) {
+    margin-top:15px;
+}
+.textWhite {
+    color: #ffffff;
+}
+.textPurple {
+    color: #a970ff;
+}
+.searchPageColor {
+    background-color: #ff7070!important;
+}
+.radiusZero {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius:  0px;
+}
+button#getCoords {
+    background-color: #70ff91;
+    color: #a970ff;
+    border: none;
+    display: block;
+    margin: auto;
+    font-size: 1.3em;
+    -webkit-box-shadow: 1px 3px 24px -4px rgba(68,68,68,0.45);
+    -moz-box-shadow: 1px 3px 24px -4px rgba(68,68,68,0.45);
+    box-shadow: 1px 3px 24px -4px rgba(68,68,68,0.45);
+}
+#locationInput {
+    display: block;
+    margin:auto;
+    padding: 0px 10px;
+    font-size: 1.3em;
+    background-color: #a970ff;
+    color: white!important;
+    border: 2px #a970ff solid;
+    -webkit-box-shadow: 1px 3px 24px -4px rgba(68,68,68,0.45);
+    -moz-box-shadow: 1px 3px 24px -4px rgba(68,68,68,0.45);
+    box-shadow: 1px 3px 24px -4px rgba(68,68,68,0.45);
+}
+#locationInput::-webkit-input-placeholder {
+    color: #ffffff;
+}
+#locationInput::-moz-placeholder {
+    color: #ffffff;
+}
+/*** STYLE GLYPH ***/
+/*** ABSOLUTE TO POSITION TO GLYPH'S PARENT ELEMENT ***/
+.inner-addon {
+    position: relative;
+}
+.inner-addon .glyphicon {
+    position: absolute;
+    top:0px;
+    padding: 2px 10px;
+    line-height: 2;
+}
+.right-addon .glyphicon {
+    right: 0px;
+    height: 100%;
+    color: #a970ff;
+}
+.right-addon input {
+    padding-right: 30px;
+}
+.glyphicon-search {
+    background-color: #ffffff;
+}
+/*** END OF STYLE GLYPH ***/
+
+/*** END OF WRAPPER - SEARCH PAGE ***/
+
+/*** WEATHER PAGE ***/
+.weatherPageColor {
+    background-color: #a970ff;
+}
+.forecastWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    font-family: Biko_Regular;
+    color: #ffffff;
+    text-align: center;
+}
+a.icon:hover {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+.todayTitle {
+    color: #82d1b4;
+}
+.maxTemp{
+    color: #70ff91;
+    margin-bottom: 0px;
+}
+.minTemp{
+    color: #85cab9;
+}
+.maxTemp, .minTemp {
+    font-size: 1.5em;
+}
+.fiveDayForecast {
+    margin-top: 20px;
+}
+.fiveDayForecast .col-sm-2 {
+    padding: 0px;
+}
+.fiveDayForecast p.todayTitle {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #ffffff;
+}
+.fiveDayForecast p.maxTemp, .fiveDayForecast p.minTemp {
+    font-size: 0.8em;
+}
+.fiveDayForecast .icon {
+    font-size: 2em;
+}
+/*** END OF WEATHER PAGE ***/
+
+
+

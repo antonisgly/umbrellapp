@@ -1,0 +1,20 @@
+<div class="forecastWrapper container" ng-controller="weatherCtrl">
+    <div class="row">
+        <div class="todayForecast col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4">
+            <p class="todayTitle">TODAY</p>
+            <p class="todayLocation">{{response.location.name}}, {{response.location.country}}</p>
+            <a class="icon" ng-repeat="(number, icon) in icons" ng-show="response.forecast.time[0].symbol._number.startsWith(number)" data-icon="{{icon}}"></a>
+            <p class="maxTemp">{{response.forecast.time[0].temperature._max | number : 0}} °C</p>
+            <p class="minTemp">{{response.forecast.time[0].temperature._min | number : 0}} °C</p>
+        </div>
+    </div>
+    <div class="fiveDayForecast row">
+        <div id="{{num}}" ng-repeat="(num, day) in response.forecast.time" ng-if="num>0" ng-class="{'col-xs-offset-1': num==1}" class="col-xs-2 col-sm-2">
+            <p class="todayTitle">{{day._day | date:"EEE"}}</p>
+            <a class="icon" ng-repeat="(number, icon) in icons" ng-show="day.symbol._number.startsWith(number)" data-icon="{{icon}}"></a>
+            <p class="maxTemp">{{day.temperature._max | number : 0}} °C</p>
+            <p class="minTemp">{{day.temperature._min  | number : 0}} °C</p>
+        </div>
+    </div>
+</div>
+
